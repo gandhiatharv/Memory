@@ -42,7 +42,7 @@ function setup() {
   textAlign(CENTER);
   textFont('Ranchers');
   //Création bouton jouer
-  jouer = new Bouton(320, 400, 300, 100, "Jouer");
+  jouer = new Bouton(320, 400, 300, 100, "Play");
 
   //Création bouton joueur1
   joueur1 = new Bouton(160, 100, 400, 300);
@@ -50,7 +50,7 @@ function setup() {
   joueur2 = new Bouton(1280 - 400 - 160, 100, 400, 300);
 
   //Création bouton rejouer
-  rejouer = new Bouton(width / 2 - 150, 400, 300, 100, "Rejouer");
+  rejouer = new Bouton(width / 2 - 150, 400, 300, 100, "Replay");
 
   //Création bouton parametres
   parametres = new Bouton(1280 - 300 - 320, 400, 300, 100, "Options");
@@ -61,7 +61,7 @@ function setup() {
   bouton[2] = new Bouton(820, 300, 80, 40, "2s", 2);
   bouton[3] = new Bouton(930, 300, 80, 40, "3s", 3);
   //Création bouton retour
-  retour = new Bouton(20, 20, 150, 50, "Retour");
+  retour = new Bouton(20, 20, 150, 50, "Return");
 
   //création du tableau + mélange cartes
   tableau = new Tableau();
@@ -198,7 +198,7 @@ function draw() {
     retour.draw(mouseX, mouseY);
     textSize(30);
     textAlign(LEFT);
-    text("Delai retournement cartes :", width / 5, 330);
+    text("Card reversal delay :", width / 5, 330);
     textAlign(CENTER);
     for (let i = 0; i <= 3; i++) {
       bouton[i].draw(mouseX, mouseY);
@@ -229,8 +229,8 @@ function draw() {
     fill(255);
     textSize(20);
     textAlign(LEFT);
-    text("Créé par Zeldrix", 1120, 680);
-    text("Version :", 1120, 705);
+    text(" ", 1120, 680);
+    text(" ", 1120, 705);
     text(numeroVersion, 1195, 705);
     fill(0);
     textSize(100);
@@ -296,10 +296,10 @@ function draw() {
     fill(0);
     textAlign(CENTER);
     textSize(80);
-    text("Félicitations !", width / 2, 200);
+    text("Congratulations !", width / 2, 200);
     textSize(50);
     fill(255);
-    text("Vous avez retourné toutes les cartes", width / 2, 330);
+    text("You have turned over all the cards.", width / 2, 330);
     textSize(80);
     rejouer.draw(mouseX, mouseY);
     textSize(40);
@@ -334,8 +334,8 @@ function draw() {
     retour.draw(mouseX, mouseY);
     textSize(80);
     textAlign(CENTER);
-    text("1    Joueur", joueur1.x + joueur1.largeur / 2, 500);
-    text("2    Joueurs", joueur2.x + joueur2.largeur / 2, 500);
+    text("1    Player", joueur1.x + joueur1.largeur / 2, 500);
+    text("2    Players", joueur2.x + joueur2.largeur / 2, 500);
 
     image(cartes[0].dos, joueur1.x + 150, 190, 70, 90);
     image(cartes[0].bordureBlanche, joueur1.x + 150, 190, 70, 90);
@@ -421,7 +421,7 @@ function draw() {
     }
     strokeWeight(5);
     textSize(50);
-    text("C'est au joueur n°", width / 2, 50);
+    text("Player", width / 2, 50);
     text(joueur, 815, 50);
 
     //pour chaque carte : dessiner
@@ -467,25 +467,25 @@ function draw() {
     textAlign(CENTER);
     textSize(80);
     if (compteJoueur1 !== compteJoueur2) {
-    text("Félicitations !", width / 2, 200);
+    text("Congratulations !", width / 2, 200);
     } else {
-      text("Égalité !", width / 2, 200);
+      text("It Is A Tie !", width / 2, 200);
     }
     textSize(50);
     strokeWeight(5);
     if (compteJoueur1 > compteJoueur2) {
       stroke(255);
       fill(255, 200, 60);
-      text("Le joueur n°      a gagné", width / 2, 330);
+      text("Player      Won !", width / 2, 330);
       text("1", width/2 + 26 , 330);
     } else if (compteJoueur1 < compteJoueur2) {
       stroke(255);
       fill(60, 60, 255);
-      text("Le joueur n°      a gagné", width / 2, 330);
+      text("Player      Won !", width / 2, 330);
       text("2", width/2 + 26 , 330);
     } else {
       fill(255);
-      text("Dommage rejouez pour vous départager", width / 2, 330);
+      text("Too Bad Replay To Decide", width / 2, 330);
     }
     textSize(80);
     rejouer.draw(mouseX, mouseY);
