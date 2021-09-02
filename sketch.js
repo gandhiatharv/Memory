@@ -1,4 +1,4 @@
-let numeroVersion = "1 . 1 . 1";
+let numeroVersion = " ";
 
 let menu = 1;
 
@@ -296,7 +296,7 @@ function draw() {
     fill(0);
     textAlign(CENTER);
     textSize(80);
-    text("Congratulations !", width / 2, 200);
+    text("Congrats !", width / 2, 200);
     textSize(50);
     fill(255);
     text("You have turned over all the cards.", width / 2, 330);
