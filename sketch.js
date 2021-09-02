@@ -477,12 +477,12 @@ function draw() {
       stroke(255);
       fill(255, 200, 60);
       text("Player                  Won !", width / 2, 330);
-      text("1", width/2 + 17 , 330);
+      text("1", width/2 + 14 , 330);
     } else if (compteJoueur1 < compteJoueur2) {
       stroke(255);
       fill(60, 60, 255);
       text("Player                  Won !", width / 2, 330);
-      text("2", width/2 + 12 , 330);
+      text("2", width/2 + 14 , 330);
     } else {
       fill(255);
       text(" ", width / 2, 330);
