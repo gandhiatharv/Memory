@@ -422,7 +422,7 @@ function draw() {
     strokeWeight(5);
     textSize(50);
     text("Player", width / 2, 50);
-    text(joueur, 815, 50);
+    text(joueur, 745, 50);
 
     //pour chaque carte : dessiner
     for (let i = 0; i < cartes.length; i++) {
@@ -467,7 +467,7 @@ function draw() {
     textAlign(CENTER);
     textSize(80);
     if (compteJoueur1 !== compteJoueur2) {
-    text("Congratulations !", width / 2, 200);
+    text("Congrats !", width / 2, 200);
     } else {
       text("It Is A Tie !", width / 2, 200);
     }
@@ -476,16 +476,16 @@ function draw() {
     if (compteJoueur1 > compteJoueur2) {
       stroke(255);
       fill(255, 200, 60);
-      text("Player      Won !", width / 2, 330);
-      text("1", width/2 + 26 , 330);
+      text("Player                  Won !", width / 2, 330);
+      text("1", width/2 + 17 , 330);
     } else if (compteJoueur1 < compteJoueur2) {
       stroke(255);
       fill(60, 60, 255);
-      text("Player      Won !", width / 2, 330);
-      text("2", width/2 + 26 , 330);
+      text("Player                  Won !", width / 2, 330);
+      text("2", width/2 + 12 , 330);
     } else {
       fill(255);
-      text("Too Bad Replay To Decide", width / 2, 330);
+      text(" ", width / 2, 330);
     }
     textSize(80);
     rejouer.draw(mouseX, mouseY);
